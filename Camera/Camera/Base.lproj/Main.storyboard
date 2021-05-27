@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ZK-iH-vWd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWe-Sq-GGL">
+                                <rect key="frame" x="20" y="138" width="374" height="685"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjS-l2-FH7">
+                                <rect key="frame" x="301" y="95" width="93" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0so-Rh-6K6">
+                                        <rect key="frame" x="4" y="5" width="85" height="30"/>
+                                        <state key="normal" title="Dark Mode">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="darkModeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ptx-Ws-3jO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0so-Rh-6K6" firstAttribute="leading" secondItem="yjS-l2-FH7" secondAttribute="leading" constant="4" id="K36-8e-Rlw"/>
+                                    <constraint firstItem="0so-Rh-6K6" firstAttribute="centerX" secondItem="yjS-l2-FH7" secondAttribute="centerX" id="cwK-Pk-BbB"/>
+                                    <constraint firstItem="0so-Rh-6K6" firstAttribute="centerY" secondItem="yjS-l2-FH7" secondAttribute="centerY" id="cyz-T2-ZWu"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osi-4Z-j2I">
+                                <rect key="frame" x="20" y="95" width="93" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMT-Qh-NHZ">
+                                        <rect key="frame" x="0.0" y="5" width="93" height="30"/>
+                                        <state key="normal" title="Light Mode">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="lightModeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUg-4x-4uB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="IMT-Qh-NHZ" firstAttribute="centerY" secondItem="osi-4Z-j2I" secondAttribute="centerY" id="BHb-6r-TpC"/>
+                                    <constraint firstItem="IMT-Qh-NHZ" firstAttribute="top" secondItem="osi-4Z-j2I" secondAttribute="top" constant="5" id="H65-ci-vu8"/>
+                                    <constraint firstItem="IMT-Qh-NHZ" firstAttribute="centerX" secondItem="osi-4Z-j2I" secondAttribute="centerX" id="K8P-13-Pcl"/>
+                                    <constraint firstItem="IMT-Qh-NHZ" firstAttribute="trailing" secondItem="osi-4Z-j2I" secondAttribute="trailingMargin" constant="8" id="fAw-Ee-o35"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="osi-4Z-j2I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="1MA-Yv-DTn"/>
+                            <constraint firstItem="yjS-l2-FH7" firstAttribute="trailing" secondItem="lWe-Sq-GGL" secondAttribute="trailing" id="37x-Fv-uBh"/>
+                            <constraint firstItem="yjS-l2-FH7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7nH-F4-OgN"/>
+                            <constraint firstItem="lWe-Sq-GGL" firstAttribute="top" secondItem="osi-4Z-j2I" secondAttribute="bottom" constant="3" id="BWK-DL-a7S"/>
+                            <constraint firstItem="yjS-l2-FH7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="301" id="ErD-Ag-GAi"/>
+                            <constraint firstItem="osi-4Z-j2I" firstAttribute="bottom" secondItem="yjS-l2-FH7" secondAttribute="bottom" id="OEC-uX-SkD"/>
+                            <constraint firstAttribute="trailing" secondItem="osi-4Z-j2I" secondAttribute="trailing" constant="301" id="RMw-fq-RD4"/>
+                            <constraint firstItem="osi-4Z-j2I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ld8-85-tG7"/>
+                            <constraint firstItem="osi-4Z-j2I" firstAttribute="top" secondItem="yjS-l2-FH7" secondAttribute="top" id="lrP-so-agp"/>
+                            <constraint firstItem="osi-4Z-j2I" firstAttribute="leading" secondItem="lWe-Sq-GGL" secondAttribute="leading" id="mMJ-Dr-sWm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lWe-Sq-GGL" secondAttribute="bottom" constant="39" id="ymu-Wb-qvp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="vqk-gg-OjN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="n5b-fk-YeB">
+                            <connections>
+                                <action selector="camera:" destination="BYZ-38-t0r" id="4WW-YS-EWI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="X2w-SH-OHz">
+                            <connections>
+                                <action selector="photoLibrary:" destination="BYZ-38-t0r" id="KRa-uT-5Ol"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="lWe-Sq-GGL" id="Ocy-eS-reP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="81.696428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5vj-BI-ZDp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ZK-iH-vWd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wld-rD-VuH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BgO-r4-ZFG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbs-M7-iNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
